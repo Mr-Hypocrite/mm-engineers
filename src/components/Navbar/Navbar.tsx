@@ -1,12 +1,21 @@
 import { CSS } from "@src/styles";
+import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Flex } from "../Flex";
 import { ImgContainer } from "../ImgContainer";
 import { NavOptions } from "./NavOptions";
 
+const navbarCss: CSS = {
+    p: "$1 $4",
+    [ ` & .hamburger ` ]: {
+        "@bp2": {
+            display: "none"
+        }
+    }
+};
+
 export const Navbar = () => {
-    const navbarCss: CSS = {
-        p: "$1"
-    };
+    const [ isOpen, setIsOpen ] = useState( false );
 
     return (
         <Flex css={navbarCss} justify={"between"} align={"center"}>
@@ -15,7 +24,13 @@ export const Navbar = () => {
                 altText="Company-Logo"
                 width={"7"}
             />
-            <NavOptions />
+            <Flex center gap={2} css={{ position: "relative" }}>
+                <NavOptions isOpen={isOpen} />
+                <GiHamburgerMenu
+                    className="hamburger"
+                    onClick={() => setIsOpen( !isOpen )}
+                />
+            </Flex>
         </Flex>
     );
 };

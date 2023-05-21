@@ -23,7 +23,9 @@ export const ImgContainer = ( {
                 alt={altText}
                 width={"100%"}
                 height={"100%"}
-                style={{ objectFit: `${objectFit ? "cover" : ""}` as any }}
+                style={{
+                    objectFit: `${objectFit ? objectFit : "cover"}` as any
+                }}
             />
         </Box>
     );
