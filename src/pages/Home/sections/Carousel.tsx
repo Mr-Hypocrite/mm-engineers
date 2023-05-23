@@ -1,13 +1,15 @@
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, ImgContainer } from "@src/components";
+import { slidesData } from "@src/data";
+import { HomeCarouselSlide } from "./CarouselSlides";
+import { SlideCard } from "@src/components/Card/SlideCard";
 
 interface CarouselProps {
     height: string;
-    imgSrc: string[];
 }
 
-export const Carousel = ( { height, imgSrc }: CarouselProps ) => {
+export const Carousel = ( { height }: CarouselProps ) => {
     return (
         <Box
             css={{
@@ -23,18 +25,32 @@ export const Carousel = ( { height, imgSrc }: CarouselProps ) => {
                     delay: 4000
                 }}
                 loop={true}
+                enabled={false}
                 modules={[ Autoplay ]}
             >
-                {imgSrc.map( ( src, key ) => (
-                    <SwiperSlide key={key}>
-                        <ImgContainer
-                            // fullHeight
-                            css={{ height: `${height}` }}
-                            imgSrc={src}
-                            altText={"imgSrc"}
-                        />
-                    </SwiperSlide>
-                ) )}
+                {slidesData.map(
+                    ( { title, subTitle, imgSrc, desc, link }, key ) => (
+                        <SwiperSlide key={key}>
+                            <HomeCarouselSlide>
+                                <ImgContainer
+                                    css={{
+                                        height: `${height}`,
+                                        width: "$full",
+                                        maxWidth: "$laptopL"
+                                    }}
+                                    imgSrc={imgSrc}
+                                    altText={"imgSrc"}
+                                />
+                                <SlideCard
+                                    title={title}
+                                    subTitle={subTitle}
+                                    desc={desc}
+                                    link={link}
+                                />
+                            </HomeCarouselSlide>
+                        </SwiperSlide>
+                    )
+                )}
             </Swiper>
             ;
         </Box>

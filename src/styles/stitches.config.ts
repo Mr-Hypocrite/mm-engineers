@@ -25,8 +25,6 @@ export const {
             primaryColor: "#ece1e0"
         },
         fonts: {
-            // alegreyaSans: "AlegreyaSans', sans-serif",
-            // exo2: "Exo2,sans-serif",
             sans: [ "Exo2,sans-serif", "'AlegreyaSans', sans-serif" ].join( "," )
         },
         fontSizes: {
@@ -65,6 +63,8 @@ export const {
             navOptions: ""
         },
         lineHeights: {
+            dtHeading1: "2rem",
+            dtHeadin2: "1.9rem",
             dtHeading3: "1.813rem",
             dtSubHeading1: "1.375rem",
             dtPara1: "1.5rem",
@@ -93,8 +93,28 @@ export const {
             14: "7rem",
             productCardWidth: "15rem",
             productCardHeight: "20rem",
+            servicesCardWidth: "10rem",
+            servicesCardHeight: "8rem",
+            featuredBlogImageHeight: "20rem",
+            // Logo
+            logoMedium: "250px",
+            featuredCarouselContainer: "1250px",
+            // Screens
+            mobileS: "320px",
+            mobileM: "375px",
+            mobileL: "425px",
+            tablet: "768px",
+            laptopS: "1024px",
+            laptopM: "1440px",
+            laptopL: "1600px",
+            hd: "1920px",
+            fourK: "2560px",
             full: "100%",
-            half: "50%"
+            half: "50%",
+            fullViewPortWidth: "100vw",
+            halfViewPortWidth: "50vw",
+            fullViewPortHeight: "100vh",
+            halfViewPortHeight: "50vh"
         },
         space: {
             0: "0rem",
