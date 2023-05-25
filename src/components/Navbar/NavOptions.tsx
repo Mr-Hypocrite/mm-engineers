@@ -1,15 +1,7 @@
 import { CSS } from "@src/styles";
 import { Flex } from "../Flex";
-import { NavLink } from "./NavLink";
 import { Text } from "../Text";
-
-const mobileNavOptionsCss: CSS = {
-    gap: "$2",
-    "@bp3": {
-        //
-    }
-};
-
+import { NavLink } from "./NavLink";
 interface navOptionsProps {
     isOpen: boolean;
 }
@@ -33,6 +25,9 @@ export const NavOptions = ( { isOpen }: navOptionsProps ) => {
                     flexDirection: "row",
                     gap: "$2",
                     p: "$3"
+                },
+                [ `& ${Text}` ]: {
+                    fontFamily: "$juliusSansOne"
                 }
             }}
         >

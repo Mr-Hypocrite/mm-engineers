@@ -25,7 +25,10 @@ export const {
             primaryColor: "#ece1e0"
         },
         fonts: {
-            sans: [ "Exo2,sans-serif", "'AlegreyaSans', sans-serif" ].join( "," )
+            sans: [ "'Cinzel', serif" ].join( "," ),
+            // cinzel: "'Cinzel', serif",
+            juliusSansOne: "'Julius Sans One', sans-serif",
+            thasadith: "'Thasadith', sans-serif"
         },
         fontSizes: {
             dtPageHead: "3.5rem",
