@@ -31,15 +31,8 @@ export const gridCss = css( {
             3: { gridTemplateColumns: "repeat(3, 1fr)" },
             4: { gridTemplateColumns: "repeat(4, 1fr)" },
             5: { gridTemplateColumns: "repeat(5, 1fr)" },
-            blogGrid: {
-                gridTemplateColumns: "repeat(auto-fill, minmax(15rem, 3fr))",
-                gridGap: "1rem"
-            },
-            propertiesGrid: {
-                gridTemplateColumns: "repeat(auto-fill, minmax(16rem, 4fr))",
-                "@mobileM": {
-                    gridTemplateColumns: "repeat(auto-fill, minmax(19rem, 4fr))"
-                },
+            products: {
+                gridTemplateColumns: "repeat(auto-fill, minmax(20rem, 4fr))",
                 gridGap: "1rem"
             }
         },
