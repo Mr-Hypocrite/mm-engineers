@@ -7,6 +7,7 @@ import { NavOptions } from "./NavOptions";
 
 const navbarCss: CSS = {
     p: "$1 $4",
+    boxShadow: "$shadowtype3",
     [ ` & .hamburger ` ]: {
         "@bp2": {
             display: "none"

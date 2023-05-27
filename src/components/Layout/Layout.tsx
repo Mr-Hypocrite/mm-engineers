@@ -11,10 +11,12 @@ export const Layout = () => {
     };
 
     return (
-        <Box css={layoutCss}>
+        <>
             <Navbar />
-            <Outlet />
+            <Box css={layoutCss}>
+                <Outlet />
+            </Box>
             <Footer />
-        </Box>
+        </>
     );
 };
