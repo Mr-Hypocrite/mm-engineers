@@ -12,19 +12,20 @@ export const NavOptions = ( { isOpen }: navOptionsProps ) => {
             direction={"column"}
             gap={2}
             css={{
+                align: "flex-end",
+                backgroundColor: "White",
                 display: `${isOpen ? "flex" : "none"}`,
                 position: "absolute",
                 top: "1rem",
-                right: "-1.5rem",
+                right: "1rem",
                 width: "max-content",
-                p: "$3",
-                align: "flex-end",
+                p: "$2 0 $2 $2",
                 "@bp2": {
                     all: "unset",
                     display: "flex",
                     flexDirection: "row",
-                    gap: "$2",
-                    p: "$3"
+                    p: "$2 0 $2 $2",
+                    gap: "$4"
                 },
                 [ `& ${Text}` ]: {
                     fontFamily: "$juliusSansOne"

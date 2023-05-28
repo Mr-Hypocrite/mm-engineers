@@ -165,7 +165,18 @@ export const {
             shadowtype3:
                 "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"
         },
-        typography: {}
+        typography: {},
+        zIndices: {
+            negativeThree: "-3",
+            negativeTwo: "-2",
+            negativeOne: "-1",
+            0: "0",
+            1: "1",
+            2: "2",
+            3: "3",
+            4: "4",
+            5: "5"
+        }
     },
     media: {
         dark: "(prefer-color-scheme: dark)",

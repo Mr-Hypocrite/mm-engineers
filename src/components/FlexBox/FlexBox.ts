@@ -4,4 +4,6 @@ import { Flex } from "../Flex";
 
 export const flexBoxCss = css( {} );
 
-export const FlexBox = styled( Box, Flex, flexBoxCss );
+const FlexBox = styled( Box, Flex, flexBoxCss );
+
+export { Box, Flex, FlexBox };

@@ -7,8 +7,9 @@ import { Box } from "../Box";
 export const Layout = () => {
     const layoutCss: CSS = {
         maxWidth: "1600px",
-        mx: "auto"
-    };
+        mx: "auto",
+        mt: "$10"
+    }
 
     return (
         <>

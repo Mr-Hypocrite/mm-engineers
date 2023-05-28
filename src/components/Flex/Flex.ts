@@ -1,5 +1,5 @@
 import { css, styled } from "@styles";
-import { Box, boxCss } from "@src/components";
+import { Box, boxCss } from "../Box";
 
 export const flexCss = css( {
     display: "flex",
