@@ -2,6 +2,8 @@ import { css, styled } from "@src/styles";
 
 export const textCss = css( {
     display: "inline-block",
+    color: "inherit",
+    my: "$1",
     variants: {
         align: {
             center: {

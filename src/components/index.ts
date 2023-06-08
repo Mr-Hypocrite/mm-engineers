@@ -1,4 +1,6 @@
+export * from "./Avatar";
 export * from "./FlexBox";
+export * from "./Button";
 export * from "./Card";
 export * from "./Loader";
 export * from "./Grid";

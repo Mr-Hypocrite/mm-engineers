@@ -1,5 +1,6 @@
 import { CSS, PropsWithCSS } from "@src/styles";
 import { VariantProps } from "@stitches/react";
+import { Button } from "../Button";
 import { Flex } from "../Flex";
 import { Text } from "../Text";
 
@@ -13,7 +14,8 @@ export const slideCardCss: CSS = {
     p: "$3",
     position: "absolute",
     top: "50%",
-    left: "20%"
+    left: "50%",
+    transform: "translate(-50%, -50%)"
 };
 
 export interface SlideCardProps
@@ -37,7 +39,9 @@ export const SlideCard = ( {
             <Text typography={"dtHeading1"}>{title}</Text>
             <Text typography={"dtHeading3"}>{subTitle}</Text>
             <Text typography={"dtPara2"}>{desc}</Text>
-            <button>More...</button>
+            <Button type={"solid"} size="medium">
+                More...
+            </Button>
         </Flex>
     ) : null;
 };

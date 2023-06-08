@@ -11,15 +11,21 @@ export const NavOptions = ( { isOpen }: navOptionsProps ) => {
         <Flex
             direction={"column"}
             gap={2}
+            className={`${isOpen ? "active" : ""}`}
             css={{
                 align: "flex-end",
-                backgroundColor: "White",
-                display: `${isOpen ? "flex" : "none"}`,
+                backgroundColor: "$primaryColor",
+                display: "flex",
                 position: "absolute",
-                top: "1rem",
-                right: "1rem",
+                top: "2.5rem",
+                right: "-1rem",
                 width: "max-content",
-                p: "$2 0 $2 $2",
+                p: "$2",
+                opacity: 0,
+                visibility: "hidden",
+                zIndex: "$negativeTwo",
+                transform: "translateY(-10px)",
+                transition: "all .4s ease-in-out",
                 "@bp2": {
                     all: "unset",
                     display: "flex",
@@ -28,7 +34,15 @@ export const NavOptions = ( { isOpen }: navOptionsProps ) => {
                     gap: "$4"
                 },
                 [ `& ${Text}` ]: {
+                    color: "$textLight",
                     fontFamily: "$juliusSansOne"
+                },
+                [ `&.active` ]: {
+                    boxShadow: "$shadowtype2",
+                    opacity: 1,
+                    visibility: "visible",
+                    zIndex: "$1",
+                    transform: "translateY(0)"
                 }
             }}
         >
@@ -37,19 +51,14 @@ export const NavOptions = ( { isOpen }: navOptionsProps ) => {
                     <b>Home</b>
                 </Text>
             </NavLink>
-            <NavLink to={"/"}>
-                <Text typography={"navOptions"}>
-                    <b>Products</b>
-                </Text>
-            </NavLink>
-            <NavLink to={"/"}>
+            <NavLink to={"/about-us"}>
                 <Text typography={"navOptions"}>
                     <b>About Us</b>
                 </Text>
             </NavLink>
             <NavLink to={"/"}>
                 <Text typography={"navOptions"}>
-                    <b>Team</b>
+                    <b>Products</b>
                 </Text>
             </NavLink>
             <NavLink to={"/"}>

@@ -6,7 +6,7 @@ import { ImgContainer } from "../ImgContainer";
 import { NavOptions } from "./NavOptions";
 
 const navbarCss: CSS = {
-    backgroundColor: "White",
+    backgroundColor: "$primaryColor",
     boxShadow: "$shadowtype3",
     position: "fixed",
     width: "$full",
@@ -35,11 +35,15 @@ export const Navbar = () => {
                 }}
             >
                 <ImgContainer
-                    imgSrc="mmEngineersLogo.png"
+                    imgSrc="mmEngineersWhiteLogo.png"
                     altText="Company-Logo"
                     width={"7"}
+                    css={{ borderRadius: "999px" }}
                 />
-                <Flex center css={{ position: "relative" }}>
+                <Flex
+                    center
+                    css={{ position: "relative", color: "$textLight" }}
+                >
                     <NavOptions isOpen={isOpen} />
                     <GiHamburgerMenu
                         className="hamburger"

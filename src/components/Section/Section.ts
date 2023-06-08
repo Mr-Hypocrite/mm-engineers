@@ -8,6 +8,7 @@ export const sectionCss = css( {
     mx: "auto",
     maxWidth: "$laptopL",
     flexDirection: "column",
+    width: "$full",
     variants: {
         variant: {
             propertyInfoCss: {

@@ -14,37 +14,56 @@ const locationSrc: string =
 
 export const Footer = () => {
     return (
-        <Flex css={{ backgroundColor: "$primaryColor" }}>
-            <Section
-                direction={{ "@initial": "column", "@bp2": "row" }}
-                gap={3}
-                css={{ width: "$full" }}
+        <>
+            <Flex
+                css={{
+                    backgroundColor: "$secondaryColor",
+                    color: "$textLight"
+                }}
             >
-                <Flex gap={4} direction={"column"} css={{ flex: 3 }}>
-                    <Text
-                        typography={{
-                            "@initial": "mbHeading1",
-                            "@bp2": "dtHeading1"
-                        }}
-                        css={{ mb: "$2" }}
-                    >
-                        CONTACTS
-                    </Text>
-                    {footerData.map( ( { key, value }, i ) => (
+                <Section
+                    direction={{ "@initial": "column", "@bp2": "row" }}
+                    gap={3}
+                    css={{
+                        width: "$full"
+                    }}
+                >
+                    <Flex gap={1} direction={"column"} css={{ flex: 3 }}>
                         <Text
                             typography={{
-                                "@initial": "navOptions",
-                                "@bp2": "dtPara3"
+                                "@initial": "mbHeading1",
+                                "@bp2": "dtHeading1"
                             }}
-                            css={{ fontWeight: "bold" }}
-                            key={i}
+                            css={{ mb: "$2" }}
                         >
-                            <Text>{key}:</Text> {value}
+                            CONTACTS
                         </Text>
-                    ) )}
-                </Flex>
-                <IframeContainer src={locationSrc} css={{ flex: 2 }} />
-            </Section>
-        </Flex>
+                        {footerData.map( ( { key, value }, i ) => (
+                            <Text
+                                typography={{
+                                    "@initial": "navOptions",
+                                    "@bp2": "dtPara3"
+                                }}
+                                css={{ fontWeight: "bold" }}
+                                key={i}
+                            >
+                                <Text>{key}:</Text> {value}
+                            </Text>
+                        ) )}
+                    </Flex>
+                    <IframeContainer src={locationSrc} css={{ flex: 2 }} />
+                </Section>
+            </Flex>
+            <Flex
+                css={{
+                    backgroundColor: "$primaryColor",
+                    color: "$textLight",
+                    py: "$3"
+                }}
+                center
+            >
+                <Text align="center">&copy; 2023 M & M Engineers</Text>
+            </Flex>
+        </>
     );
 };

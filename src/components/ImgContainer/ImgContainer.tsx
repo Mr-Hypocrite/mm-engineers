@@ -17,7 +17,7 @@ export const ImgContainer = ( {
     ...props
 }: ImgContainerProps ) => {
     return (
-        <Box {...props} css={css}>
+        <Box {...props} css={{ lineHeight: 0, fontSize: 0, ...css }}>
             <img
                 src={imgSrc}
                 alt={altText}
