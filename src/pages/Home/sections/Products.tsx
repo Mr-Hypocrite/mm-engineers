@@ -3,7 +3,18 @@ import { products } from "@src/data";
 import { CSS } from "@src/styles";
 
 const productMiniCardCss: CSS = {
-    fontFamily: "$juliusSansOne"
+    cursor: "pointer",
+    fontFamily: "$juliusSansOne",
+    width: "calc($full - $6)",
+    p: "$1 $3",
+    transition: "all .3s ease-in-out",
+    "@bp1": {
+        width: "$full"
+    },
+    "&:hover": {
+        backgroundColor: "$secondaryColor",
+        color: "$textLight"
+    }
 };
 
 export const ProductMiniCard = ( { title }: { title: string } ) => {
@@ -20,7 +31,11 @@ export const Products = () => {
             <Text typography={"dtHeading1"}>
                 <Text css={{ fontWeight: "800" }}>Our</Text> Products
             </Text>
-            <Grid columns={"products"} css={{ my: "$5", gridRowGap: "$3" }}>
+            <Grid
+                columns={"products"}
+                gap={3}
+                css={{ my: "$5", width: "$full" }}
+            >
                 {products.map( ( { productTitle }, key ) => (
                     <ProductMiniCard title={productTitle} key={key} />
                 ) )}

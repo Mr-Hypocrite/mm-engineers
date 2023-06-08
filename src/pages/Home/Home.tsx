@@ -1,13 +1,20 @@
-import { About, Carousel, OurBest, Products, Services } from "./sections";
+import {
+    About,
+    Carousel,
+    OurBest,
+    Products,
+    Services,
+    Testimonials
+} from "./sections";
 
 export const Home = () => {
     return (
         <>
             <Carousel height={"60vh"} />
             <About />
-            {/* <Services /> */}
             <Products />
             <OurBest />
+            <Testimonials />
         </>
     );
 };

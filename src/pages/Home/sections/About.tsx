@@ -1,13 +1,18 @@
-import { Box, Flex, Section, Text } from "@src/components";
+import { Box, Button, Flex, Section, Text } from "@src/components";
 
 export const About = () => {
     return (
         <Section gap={5}>
-            <Text typography={"dtHeading1"}>Heading Desc About M & M</Text>
+            <Text
+                typography={{ "@initial": "mbHeading1", "@bp1": "dtHeading1" }}
+            >
+                Heading Desc About{" "}
+                <Text css={{ wordBreak: "keep-all" }}>M & M</Text>
+            </Text>
             <Flex gap={5} wrap={"wrap"}>
                 <Text
                     typography={"dtPara2"}
-                    css={{ flex: 1, minWidth: "calc($mobileS - 20px)" }}
+                    css={{ flex: 1, minWidth: "calc($mobileS -$3)" }}
                 >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Dolorem, ullam dolorum ipsam, numquam tempore voluptatibus
@@ -17,8 +22,13 @@ export const About = () => {
                     animi modi, nihil voluptatem accusamus nisi commodi unde eos
                     accusantium.
                 </Text>
-                <Box css={{ flex: 1, minWidth: "calc($mobileS - 20px)" }}>
-                    <Text typography={"dtPara2"}>
+                <Box css={{ flex: 1, minWidth: "calc($mobileS -$3)" }}>
+                    <Text
+                        typography={{
+                            "@initial": "mbPara1",
+                            "@bp1": "dtPara2"
+                        }}
+                    >
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Dolorem, ullam dolorum ipsam, numquam tempore
                         voluptatibus fuga repellendus aliquam pariatur omnis
@@ -27,7 +37,7 @@ export const About = () => {
                         consequuntur ad. Ratione animi modi, nihil voluptatem
                         accusamus nisi commodi unde eos accusantium.
                     </Text>
-                    <button>More...</button>
+                    <Button type={"text"}>More...</Button>
                 </Box>
             </Flex>
         </Section>
