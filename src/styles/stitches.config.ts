@@ -19,10 +19,13 @@ export const {
 } = createStitches( {
     theme: {
         colors: {
-            complentaryColor: "#2C3333",
-            accentColor: "#CBE4DE",
-            secondaryColor: "#b5c0bc",
-            primaryColor: "#ece1e0"
+            // Set1
+            primaryColor: "#061A40",
+            secondaryColor: "#385F71",
+            baseColor: "#FFFFFF",
+            neutralColor: "#F5F0F6",
+            textLight: "White",
+            textDark: "Black"
         },
         fonts: {
             sans: [ "'Cinzel', serif" ].join( "," ),
@@ -117,7 +120,8 @@ export const {
             fullViewPortWidth: "100vw",
             halfViewPortWidth: "50vw",
             fullViewPortHeight: "100vh",
-            halfViewPortHeight: "50vh"
+            halfViewPortHeight: "50vh",
+            testimonialCardWidth: "20rem"
         },
         space: {
             0: "0rem",
