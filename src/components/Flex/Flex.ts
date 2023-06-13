@@ -6,13 +6,16 @@ export const flexCss = css( {
     variants: {
         direction: {
             column: { flexDirection: "column" },
-            row: { flexDirection: "row" }
+            row: { flexDirection: "row" },
+            columnReverse: { flexDirection: "column-reverse" },
+            rowReverse: { flexDirection: "row-reverse" }
         },
         justify: {
             start: { justifyContent: "flex-start" },
             center: { justifyContent: "center" },
             end: { justifyContent: "flex-end" },
-            between: { justifyContent: "space-between" }
+            between: { justifyContent: "space-between" },
+            around: { justifyContent: "space-around" }
         },
         wrap: {
             noWrap: { flexWrap: "nowrap" },
