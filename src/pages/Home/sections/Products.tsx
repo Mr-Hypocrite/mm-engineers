@@ -1,4 +1,4 @@
-import { Flex, Grid, Section, Text } from "@src/components";
+import { Flex, Grid, ProductCard, Section, Text } from "@src/components";
 import { products } from "@src/data";
 import { CSS } from "@src/styles";
 
@@ -36,9 +36,16 @@ export const Products = () => {
                 gap={3}
                 css={{ my: "$5", width: "$full" }}
             >
-                {products.map( ( { productTitle }, key ) => (
-                    <ProductMiniCard title={productTitle} key={key} />
-                ) )}
+                {products.map(
+                    ( { productTitle, productImg, productDescription }, key ) => (
+                        <ProductCard
+                            productImg={productImg}
+                            productTitle={productTitle}
+                            productDescription={productDescription}
+                            key={`${productTitle}_${key}`}
+                        />
+                    )
+                )}
             </Grid>
         </Section>
     );
