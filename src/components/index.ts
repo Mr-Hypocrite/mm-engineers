@@ -12,3 +12,4 @@ export * from "./Footer";
 export * from "./Layout";
 export * from "./ScrollToTop";
 export * from "./Section";
+export * from "./Timeline";
